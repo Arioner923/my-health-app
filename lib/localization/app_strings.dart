@@ -1,0 +1,486 @@
+/// This class contains all text labels used in the application.
+///
+/// The goal is to keep the app multilingual without writing text directly
+/// inside the UI screens. This makes the project cleaner and easier to expand.
+///
+/// Supported languages:
+/// - English: default language
+/// - Greek: additional language
+class AppStrings {
+  /// Stores the currently selected language.
+  ///
+  /// Default language is English, as required by the project instructions.
+  static String currentLanguage = 'en';
+
+  /// Main dictionary that contains all translated text values.
+  ///
+  /// Each language has its own map:
+  /// - 'en' for English
+  /// - 'el' for Greek
+  static final Map<String, Map<String, String>> _values = {
+    'en': {
+      'appTitle': 'My Health App',
+      'login': 'Login',
+      'email': 'Email or username',
+      'password': 'Password',
+      'enterEmail': 'Please enter your email or username',
+      'invalidEmailOrUsername': 'Please enter a valid email or username',
+      'enterPassword': 'Please enter your password',
+      'passwordLength': 'Password must be at least 4 characters',
+      'home': 'Home',
+      'welcome': 'Welcome to My Health App',
+      'dashboardSubtitle': 'Patient health dashboard',
+
+      // API dashboard cards
+      'motivation': 'Motivation',
+      'environment': 'Heraklion Environment',
+      'temperature': 'Temperature',
+      'airQuality': 'Air Quality Index',
+      'loadingData': 'Loading health dashboard data...',
+      'unavailable': 'Unavailable',
+
+      // Main modules
+      'patientDemographics': 'Patient Demographics',
+      'who5': 'WHO-5 Questionnaire',
+      'framingham': 'Framingham Score',
+      'findrisc': 'FINDRISC Score',
+      'allergies': 'Allergies',
+      'medications': 'Medications',
+      'problemList': 'Problem List',
+      'calendar': 'Calendar',
+      'charts': 'Charts',
+      'settings': 'Settings',
+
+      // Patient demographics form
+      'name': 'Name',
+      'age': 'Age',
+      'gender': 'Gender',
+      'race': 'Race',
+      'ethnicity': 'Ethnicity',
+      'birthday': 'Birthday',
+      'city': 'City',
+      'country': 'Country',
+      'save': 'Save',
+      'savedSuccessfully': 'Data saved successfully.',
+      'selectBirthday': 'Select birthday',
+      'male': 'Male',
+      'female': 'Female',
+      'other': 'Other',
+      'pleaseFillField': 'Please fill this field',
+
+      // WHO-5 questionnaire
+      'who5Title': 'WHO-5 Well-Being Index',
+      'who5Instructions': 'Please answer based on how you have felt during the last two weeks.',
+      'cheerfulMood': 'Cheerful mood',
+      'calmRelaxed': 'Calm and relaxed',
+      'activeEnergetic': 'Active and energetic',
+      'freshRested': 'Fresh and rested',
+      'dailyInterest': 'Interested in daily life',
+      'allOfTheTime': 'All of the time',
+      'mostOfTheTime': 'Most of the time',
+      'moreThanHalf': 'More than half of the time',
+      'lessThanHalf': 'Less than half of the time',
+      'someOfTheTime': 'Some of the time',
+      'atNoTime': 'At no time',
+      'calculateScore': 'Calculate Score',
+      'rawScore': 'Raw Score',
+      'percentageScore': 'Percentage Score',
+      'wellbeingCategory': 'Well-being Category',
+      'goodWellbeing': 'Good well-being',
+      'lowWellbeing': 'Low well-being - further assessment may be useful',
+      'who5History': 'WHO-5 History',
+      'noResultsYet': 'No saved results yet.',
+
+      // Framingham score calculator
+      'framinghamTitle': 'Framingham Cardiovascular Risk Score',
+      'framinghamInstructions': 'Enter the patient risk factors to estimate cardiovascular risk.',
+      'totalCholesterol': 'Total Cholesterol',
+      'hdlCholesterol': 'HDL Cholesterol',
+      'systolicBp': 'Systolic Blood Pressure',
+      'treatedBp': 'Blood pressure medication',
+      'smoker': 'Smoker',
+      'diabetes': 'Diabetes',
+      'yes': 'Yes',
+      'no': 'No',
+      'calculateRisk': 'Calculate Risk',
+      'riskPoints': 'Risk Points',
+      'riskPercentage': 'Estimated 10-year Risk',
+      'riskCategory': 'Risk Category',
+      'lowRisk': 'Low risk',
+      'moderateRisk': 'Moderate risk',
+      'highRisk': 'High risk',
+      'framinghamHistory': 'Framingham History',
+      'mgDl': 'mg/dL',
+      'mmHg': 'mmHg',
+      'invalidNumber': 'Please enter a valid number',
+      'ageRangeFramingham': 'Age must be between 20 and 79',
+      'date': 'Date',
+
+      // FINDRISC score calculator
+      'findriscTitle': 'Finnish Diabetes Risk Score',
+      'findriscInstructions': 'Answer the questions to estimate the risk of developing type 2 diabetes.',
+      'bmi': 'Body Mass Index',
+      'waistCircumference': 'Waist Circumference',
+      'physicalActivity': 'Daily physical activity',
+      'fruitVegetables': 'Daily fruit or vegetable intake',
+      'highBpMedication': 'High blood pressure medication',
+      'highGlucoseHistory': 'History of high blood glucose',
+      'familyHistoryDiabetes': 'Family history of diabetes',
+      'under45': 'Under 45 years',
+      'age45to54': '45–54 years',
+      'age55to64': '55–64 years',
+      'over64': 'Over 64 years',
+      'bmiUnder25': 'BMI under 25',
+      'bmi25to30': 'BMI 25–30',
+      'bmiOver30': 'BMI over 30',
+      'waistLow': 'Low waist circumference',
+      'waistMedium': 'Medium waist circumference',
+      'waistHigh': 'High waist circumference',
+      'dailyYes': 'Yes, daily',
+      'dailyNo': 'No',
+      'familyNone': 'No family history',
+      'familySecondDegree': 'Second-degree relative',
+      'familyFirstDegree': 'First-degree relative',
+      'findriscScore': 'FINDRISC Score',
+      'diabetesRisk': 'Diabetes Risk',
+      'slightlyElevatedRisk': 'Slightly elevated risk',
+      'veryHighRisk': 'Very high risk',
+      'findriscHistory': 'FINDRISC History',
+      'points': 'points',
+      'cm': 'cm',
+
+      // Allergies module
+      'allergiesTitle': 'Allergies',
+      'allergiesInstructions': 'Add and manage patient allergy records.',
+      'allergenName': 'Allergen Name',
+      'reactionDescription': 'Reaction Description',
+      'severity': 'Severity',
+      'onsetDate': 'Onset Date',
+      'notes': 'Notes',
+      'addAllergy': 'Add Allergy',
+      'delete': 'Delete',
+      'noAllergiesYet': 'No allergies saved yet.',
+      'mild': 'Mild',
+      'moderate': 'Moderate',
+      'severe': 'Severe',
+      'selectDate': 'Select Date',
+
+      // Medication module
+      'medicationsTitle': 'Medications',
+      'medicationsInstructions': 'Add and manage patient medication records.',
+      'medicationName': 'Medication Name',
+      'dosage': 'Dosage',
+      'frequency': 'Frequency',
+      'startDate': 'Start Date',
+      'endDate': 'End Date',
+      'ongoing': 'Ongoing Medication',
+      'addMedication': 'Add Medication',
+      'currentMedications': 'Current Medications',
+      'medicationHistory': 'Medication History',
+      'noCurrentMedications': 'No current medications saved yet.',
+      'noMedicationHistory': 'No medication history saved yet.',
+      'endDateRequired': 'Please select an end date or mark the medication as ongoing.',
+
+      // Problem List module
+      'problemListTitle': 'Problem List',
+      'problemListInstructions': 'Search ICD-10 terminology and add patient problems.',
+      'searchIcd': 'Search ICD-10 code or diagnosis',
+      'icdCode': 'ICD-10 Code',
+      'diagnosisTitle': 'Diagnosis / Problem Title',
+      'status': 'Status',
+      'active': 'Active',
+      'resolved': 'Resolved',
+      'chronic': 'Chronic',
+      'dateAdded': 'Date Added',
+      'addProblem': 'Add Problem',
+      'savedProblems': 'Saved Problems',
+      'noProblemsYet': 'No problems saved yet.',
+      'selectIcdFirst': 'Please select an ICD-10 diagnosis first.',
+
+      // Calendar module
+      'calendarTitle': 'Health Calendar',
+      'calendarInstructions': 'Add and manage health-related events.',
+      'eventTitle': 'Event Title',
+      'eventType': 'Event Type',
+      'eventDate': 'Event Date',
+      'eventDescription': 'Description',
+      'addEvent': 'Add Event',
+      'eventsForSelectedDay': 'Events for Selected Day',
+      'noEventsForDay': 'No events for this day.',
+      'appointment': 'Appointment',
+      'questionnaire': 'Questionnaire',
+      'riskScore': 'Risk Score',
+      'general': 'General',
+
+      // Charts module
+      'chartsTitle': 'Score Charts',
+      'chartsInstructions': 'Graphical monitoring of health scores over time.',
+      'who5Chart': 'WHO-5 Score Over Time',
+      'framinghamChart': 'Framingham Risk Over Time',
+      'findriscChart': 'FINDRISC Score Over Time',
+      'notEnoughData': 'Not enough saved data to display this chart.',
+      'score': 'Score',
+
+      // Settings module
+      'settingsTitle': 'Application Settings',
+      'settingsInstructions': 'Change application preferences.',
+      'selectLanguage': 'Select Language',
+      'languageChanged': 'Language changed successfully.',
+
+      // Automatic calendar events
+      'autoEventQuestionnaire': 'Questionnaire completed',
+      'autoEventRiskScore': 'Risk score calculated',
+      'autoEventMedication': 'Medication added',
+      'autoEventAllergy': 'Allergy recorded',
+      'autoEventProblem': 'Problem added',
+      'allergyRecord': 'Allergy',
+      'problemRecord': 'Problem',
+      
+
+      // Language labels
+      'language': 'Language',
+      'english': 'English',
+      'greek': 'Greek',
+
+      // Placeholder message
+      'comingSoon': 'This module will be implemented in the next steps.',
+    },
+    'el': {
+      'appTitle': 'My Health App',
+      'login': 'Σύνδεση',
+      'email': 'Email ή όνομα χρήστη',
+      'password': 'Κωδικός',
+      'enterEmail': 'Παρακαλώ γράψε email ή όνομα χρήστη',
+      'invalidEmailOrUsername': 'Παρακαλώ γράψε έγκυρο email ή username',
+      'enterPassword': 'Παρακαλώ γράψε κωδικό',
+      'passwordLength': 'Ο κωδικός πρέπει να έχει τουλάχιστον 4 χαρακτήρες',
+      'home': 'Αρχική',
+      'welcome': 'Καλώς ήρθες στο My Health App',
+      'dashboardSubtitle': 'Πίνακας υγείας ασθενή',
+
+      // API dashboard cards
+      'motivation': 'Κίνητρο',
+      'environment': 'Περιβάλλον Ηρακλείου',
+      'temperature': 'Θερμοκρασία',
+      'airQuality': 'Δείκτης Ποιότητας Αέρα',
+      'loadingData': 'Φόρτωση δεδομένων πίνακα υγείας...',
+      'unavailable': 'Μη διαθέσιμο',
+
+      // Main modules
+      'patientDemographics': 'Δημογραφικά Ασθενή',
+      'who5': 'Ερωτηματολόγιο WHO-5',
+      'framingham': 'Framingham Score',
+      'findrisc': 'FINDRISC Score',
+      'allergies': 'Αλλεργίες',
+      'medications': 'Φαρμακευτική Αγωγή',
+      'problemList': 'Λίστα Προβλημάτων',
+      'calendar': 'Ημερολόγιο',
+      'charts': 'Γραφήματα',
+      'settings': 'Ρυθμίσεις',
+
+      // Patient demographics form
+      'name': 'Όνομα',
+      'age': 'Ηλικία',
+      'gender': 'Φύλο',
+      'race': 'Φυλή',
+      'ethnicity': 'Εθνικότητα',
+      'birthday': 'Ημερομηνία Γέννησης',
+      'city': 'Πόλη',
+      'country': 'Χώρα',
+      'save': 'Αποθήκευση',
+      'savedSuccessfully': 'Τα δεδομένα αποθηκεύτηκαν με επιτυχία.',
+      'selectBirthday': 'Επιλογή ημερομηνίας γέννησης',
+      'male': 'Άνδρας',
+      'female': 'Γυναίκα',
+      'other': 'Άλλο',
+      'pleaseFillField': 'Παρακαλώ συμπλήρωσε αυτό το πεδίο',
+
+      // WHO-5 questionnaire
+      'who5Title': 'WHO-5 Well-Being Index',
+      'who5Instructions': 'Απάντησε με βάση το πώς ένιωθες τις τελευταίες δύο εβδομάδες.',
+      'cheerfulMood': 'Καλή διάθεση',
+      'calmRelaxed': 'Ηρεμία και χαλάρωση',
+      'activeEnergetic': 'Ενέργεια και δραστηριότητα',
+      'freshRested': 'Ξεκούραση μετά τον ύπνο',
+      'dailyInterest': 'Ενδιαφέρον για την καθημερινότητα',
+      'allOfTheTime': 'Όλη την ώρα',
+      'mostOfTheTime': 'Τον περισσότερο χρόνο',
+      'moreThanHalf': 'Πάνω από τον μισό χρόνο',
+      'lessThanHalf': 'Λιγότερο από τον μισό χρόνο',
+      'someOfTheTime': 'Μερικές φορές',
+      'atNoTime': 'Καθόλου',
+      'calculateScore': 'Υπολογισμός Score',
+      'rawScore': 'Raw Score',
+      'percentageScore': 'Ποσοστιαίο Score',
+      'wellbeingCategory': 'Κατηγορία Ευεξίας',
+      'goodWellbeing': 'Καλή ευεξία',
+      'lowWellbeing': 'Χαμηλή ευεξία - ίσως χρειάζεται περαιτέρω αξιολόγηση',
+      'who5History': 'Ιστορικό WHO-5',
+      'noResultsYet': 'Δεν υπάρχουν αποθηκευμένα αποτελέσματα ακόμα.',
+
+      // Framingham score calculator
+      'framinghamTitle': 'Framingham Cardiovascular Risk Score',
+      'framinghamInstructions': 'Συμπλήρωσε τους παράγοντες κινδύνου για εκτίμηση καρδιαγγειακού κινδύνου.',
+      'totalCholesterol': 'Ολική Χοληστερόλη',
+      'hdlCholesterol': 'HDL Χοληστερόλη',
+      'systolicBp': 'Συστολική Πίεση',
+      'treatedBp': 'Αγωγή για πίεση',
+      'smoker': 'Καπνιστής',
+      'diabetes': 'Διαβήτης',
+      'yes': 'Ναι',
+      'no': 'Όχι',
+      'calculateRisk': 'Υπολογισμός Κινδύνου',
+      'riskPoints': 'Πόντοι Κινδύνου',
+      'riskPercentage': 'Εκτιμώμενος 10ετής Κίνδυνος',
+      'riskCategory': 'Κατηγορία Κινδύνου',
+      'lowRisk': 'Χαμηλός κίνδυνος',
+      'moderateRisk': 'Μέτριος κίνδυνος',
+      'highRisk': 'Υψηλός κίνδυνος',
+      'framinghamHistory': 'Ιστορικό Framingham',
+      'mgDl': 'mg/dL',
+      'mmHg': 'mmHg',
+      'invalidNumber': 'Παρακαλώ γράψε έγκυρο αριθμό',
+      'ageRangeFramingham': 'Η ηλικία πρέπει να είναι από 20 έως 79',
+      'date': 'Ημερομηνία',
+
+      // FINDRISC score calculator
+      'findriscTitle': 'Finnish Diabetes Risk Score',
+      'findriscInstructions': 'Απάντησε στις ερωτήσεις για εκτίμηση κινδύνου εμφάνισης διαβήτη τύπου 2.',
+      'bmi': 'Δείκτης Μάζας Σώματος',
+      'waistCircumference': 'Περιφέρεια Μέσης',
+      'physicalActivity': 'Καθημερινή φυσική δραστηριότητα',
+      'fruitVegetables': 'Καθημερινή κατανάλωση φρούτων ή λαχανικών',
+      'highBpMedication': 'Αγωγή για υψηλή πίεση',
+      'highGlucoseHistory': 'Ιστορικό υψηλής γλυκόζης',
+      'familyHistoryDiabetes': 'Οικογενειακό ιστορικό διαβήτη',
+      'under45': 'Κάτω από 45 ετών',
+      'age45to54': '45–54 ετών',
+      'age55to64': '55–64 ετών',
+      'over64': 'Πάνω από 64 ετών',
+      'bmiUnder25': 'BMI κάτω από 25',
+      'bmi25to30': 'BMI 25–30',
+      'bmiOver30': 'BMI πάνω από 30',
+      'waistLow': 'Χαμηλή περιφέρεια μέσης',
+      'waistMedium': 'Μέτρια περιφέρεια μέσης',
+      'waistHigh': 'Υψηλή περιφέρεια μέσης',
+      'dailyYes': 'Ναι, καθημερινά',
+      'dailyNo': 'Όχι',
+      'familyNone': 'Χωρίς οικογενειακό ιστορικό',
+      'familySecondDegree': 'Συγγενής δεύτερου βαθμού',
+      'familyFirstDegree': 'Συγγενής πρώτου βαθμού',
+      'findriscScore': 'FINDRISC Score',
+      'diabetesRisk': 'Κίνδυνος Διαβήτη',
+      'slightlyElevatedRisk': 'Ελαφρώς αυξημένος κίνδυνος',
+      'veryHighRisk': 'Πολύ υψηλός κίνδυνος',
+      'findriscHistory': 'Ιστορικό FINDRISC',
+      'points': 'πόντοι',
+      'cm': 'cm',
+
+      // Allergies module
+      'allergiesTitle': 'Αλλεργίες',
+      'allergiesInstructions': 'Προσθήκη και διαχείριση αλλεργιών ασθενή.',
+      'allergenName': 'Όνομα Αλλεργιογόνου',
+      'reactionDescription': 'Περιγραφή Αντίδρασης',
+      'severity': 'Σοβαρότητα',
+      'onsetDate': 'Ημερομηνία Έναρξης',
+      'notes': 'Σημειώσεις',
+      'addAllergy': 'Προσθήκη Αλλεργίας',
+      'delete': 'Διαγραφή',
+      'noAllergiesYet': 'Δεν υπάρχουν αποθηκευμένες αλλεργίες ακόμα.',
+      'mild': 'Ήπια',
+      'moderate': 'Μέτρια',
+      'severe': 'Σοβαρή',
+      'selectDate': 'Επιλογή Ημερομηνίας',
+
+      // Medication module
+      'medicationsTitle': 'Φαρμακευτική Αγωγή',
+      'medicationsInstructions': 'Προσθήκη και διαχείριση φαρμακευτικής αγωγής ασθενή.',
+      'medicationName': 'Όνομα Φαρμάκου',
+      'dosage': 'Δοσολογία',
+      'frequency': 'Συχνότητα',
+      'startDate': 'Ημερομηνία Έναρξης',
+      'endDate': 'Ημερομηνία Λήξης',
+      'ongoing': 'Συνεχιζόμενη Αγωγή',
+      'addMedication': 'Προσθήκη Φαρμάκου',
+      'currentMedications': 'Τρέχουσα Φαρμακευτική Αγωγή',
+      'medicationHistory': 'Ιστορικό Φαρμακευτικής Αγωγής',
+      'noCurrentMedications': 'Δεν υπάρχει αποθηκευμένη τρέχουσα αγωγή.',
+      'noMedicationHistory': 'Δεν υπάρχει αποθηκευμένο ιστορικό αγωγής.',
+      'endDateRequired': 'Επίλεξε ημερομηνία λήξης ή δήλωσε ότι η αγωγή συνεχίζεται.',
+
+      // Problem List module
+      'problemListTitle': 'Λίστα Προβλημάτων',
+      'problemListInstructions': 'Αναζήτηση ICD-10 ορολογίας και προσθήκη προβλημάτων ασθενή.',
+      'searchIcd': 'Αναζήτηση ICD-10 κωδικού ή διάγνωσης',
+      'icdCode': 'ICD-10 Κωδικός',
+      'diagnosisTitle': 'Διάγνωση / Τίτλος Προβλήματος',
+      'status': 'Κατάσταση',
+      'active': 'Ενεργό',
+      'resolved': 'Αντιμετωπισμένο',
+      'chronic': 'Χρόνιο',
+      'dateAdded': 'Ημερομηνία Προσθήκης',
+      'addProblem': 'Προσθήκη Προβλήματος',
+      'savedProblems': 'Αποθηκευμένα Προβλήματα',
+      'noProblemsYet': 'Δεν υπάρχουν αποθηκευμένα προβλήματα ακόμα.',
+      'selectIcdFirst': 'Παρακαλώ επίλεξε πρώτα μία ICD-10 διάγνωση.',
+
+      // Calendar module
+      'calendarTitle': 'Ημερολόγιο Υγείας',
+      'calendarInstructions': 'Προσθήκη και διαχείριση γεγονότων υγείας.',
+      'eventTitle': 'Τίτλος Γεγονότος',
+      'eventType': 'Τύπος Γεγονότος',
+      'eventDate': 'Ημερομηνία Γεγονότος',
+      'eventDescription': 'Περιγραφή',
+      'addEvent': 'Προσθήκη Γεγονότος',
+      'eventsForSelectedDay': 'Γεγονότα Επιλεγμένης Ημέρας',
+      'noEventsForDay': 'Δεν υπάρχουν γεγονότα για αυτή την ημέρα.',
+      'appointment': 'Ραντεβού',
+      'questionnaire': 'Ερωτηματολόγιο',
+      'riskScore': 'Risk Score',
+      'general': 'Γενικό',
+
+      // Charts module
+      'chartsTitle': 'Γραφήματα Scores',
+      'chartsInstructions': 'Γραφική παρακολούθηση των scores στον χρόνο.',
+      'who5Chart': 'WHO-5 Score στον Χρόνο',
+      'framinghamChart': 'Framingham Risk στον Χρόνο',
+      'findriscChart': 'FINDRISC Score στον Χρόνο',
+      'notEnoughData': 'Δεν υπάρχουν αρκετά αποθηκευμένα δεδομένα για το γράφημα.',
+      'score': 'Score',
+
+      // Settings module
+      'settingsTitle': 'Ρυθμίσεις Εφαρμογής',
+      'settingsInstructions': 'Αλλαγή προτιμήσεων εφαρμογής.',
+      'selectLanguage': 'Επιλογή Γλώσσας',
+      'languageChanged': 'Η γλώσσα άλλαξε με επιτυχία.',
+
+      // Automatic calendar events
+      'autoEventQuestionnaire': 'Το ερωτηματολόγιο ολοκληρώθηκε',
+      'autoEventRiskScore': 'Υπολογίστηκε risk score',
+      'autoEventMedication': 'Προστέθηκε φάρμακο',
+      'autoEventAllergy': 'Καταγράφηκε αλλεργία',
+      'autoEventProblem': 'Προστέθηκε πρόβλημα',
+      'allergyRecord': 'Αλλεργία',
+      'problemRecord': 'Πρόβλημα',
+
+      // Language labels
+      'language': 'Γλώσσα',
+      'english': 'Αγγλικά',
+      'greek': 'Ελληνικά',
+
+      // Placeholder message
+      'comingSoon': 'Αυτό το module θα υλοποιηθεί στα επόμενα βήματα.',
+    },
+  };
+
+  /// Returns the translated text for the given key.
+  ///
+  /// If a translation is missing from the selected language, the function
+  /// tries to return the English translation as a fallback.
+  ///
+  /// If the key does not exist at all, it returns the key itself.
+  /// This prevents the application from crashing.
+  static String get(String key) {
+    return _values[currentLanguage]?[key] ?? _values['en']?[key] ?? key;
+  }
+}
